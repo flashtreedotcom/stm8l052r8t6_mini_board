@@ -1,0 +1,228 @@
+###############################################################################
+#
+# IAR ELF Linker V3.10.1.201 for STM8                     01/Sep/2019  21:13:25
+# Copyright 2010-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\admin\Documents\stm8_project\Debug\Exe\stm8_project.out
+#    Map file     =  
+#        C:\Users\admin\Documents\stm8_project\Debug\List\stm8_project.map
+#    Command line =  
+#        -f C:\Users\admin\AppData\Local\Temp\EWF44C.tmp
+#        (C:\Users\admin\Documents\stm8_project\Debug\Obj\main.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_adc.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_aes.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_beep.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_clk.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_comp.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_dac.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_dma.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_exti.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_flash.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_gpio.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_i2c.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_irtim.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_itc.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_iwdg.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_lcd.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_pwr.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_rst.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_rtc.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_spi.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_syscfg.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_tim1.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_tim2.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_tim3.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_tim4.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_tim5.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_usart.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_wfe.o
+#        C:\Users\admin\Documents\stm8_project\Debug\Obj\stm8l15x_wwdg.o
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb -o
+#        C:\Users\admin\Documents\stm8_project\Debug\Exe\stm8_project.out --map
+#        C:\Users\admin\Documents\stm8_project\Debug\List\stm8_project.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\stm8\config\lnkstm8l052r8.icf" --config_def _CSTACK_SIZE=0x100
+#        --config_def _HEAP_SIZE=0x100 --entry __iar_program_start --debug_lib)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__SystemLibrary            = DLib
+__code_model               = small
+__core                     = stm8
+__data_model               = medium
+__dlib_file_descriptor     = 0
+__dlib_full_locale_support = 0
+__rt_version               = 4
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x000000-0x0000ff] { rw section .vregs };
+"A1":  place at end of [0x000000-0x000fff] { block CSTACK };
+"A2":  place at start of [0x008000-0x00ffff] { block INTVEC };
+"P3":  place in [from 0x008000 to 0x00ffff] {
+          ro section __DLIB_PERTHREAD_init, ro section .far.data_init,
+          ro section .far_func.textrw_init, ro section .huge.data_init,
+          ro section .huge_func.textrw_init, ro section .iar.init_table,
+          ro section .init_array, ro section .near.data_init,
+          ro section .near.rodata, ro section .near_func.text,
+          ro section .near_func.textrw_init, ro section .tiny.data_init,
+          ro section .tiny.rodata_init };
+do not initialize {
+   rw section .eeprom.noinit, rw section .far.noinit, rw section .huge.noinit,
+   rw section .near.noinit, rw section .tiny.noinit, rw section .vregs };
+
+  Section          Kind      Address   Size  Object
+  -------          ----      -------   ----  ------
+"A0":                                   0xc
+  .vregs           uninit   0x000000    0xc  vregs.o [4]
+                          - 0x00000c    0xc
+
+"A1":                                 0x100
+  CSTACK                    0x000f00  0x100  <Block>
+    CSTACK         uninit   0x000f00  0x100  <Block tail>
+                          - 0x001000  0x100
+
+"A2":                                  0x80
+  INTVEC                    0x008000   0x80  <Block>
+    .intvec        const    0x008000   0x80  interrupt.o [4]
+                          - 0x008080   0x80
+
+"P3":                                 0x14d
+  .near_func.text  ro code  0x008080   0x8e  stm8l15x_gpio.o [1]
+  .near_func.text  ro code  0x00810e   0x1c  main.o [1]
+  .near_func.text  ro code  0x00812a   0x18  vreg_util.o [4]
+  .near_func.text  ro code  0x008142   0x17  main.o [1]
+  .near_func.text  ro code  0x008159   0x14  init.o [4]
+  .near_func.text  ro code  0x00816d   0x14  __dbg_xxexit.o [3]
+  .near_func.text  ro code  0x008181   0x13  cstartup.o [4]
+  .near_func.text  ro code  0x008194    0xc  main.o [1]
+  .near_func.text  ro code  0x0081a0    0x8  main.o [1]
+  .near_func.text  ro code  0x0081a8    0x8  main.o [1]
+  .near_func.text  ro code  0x0081b0    0x7  stm8l15x_gpio.o [1]
+  .near_func.text  ro code  0x0081b7    0x5  cexit.o [4]
+  .near_func.text  ro code  0x0081bc    0x4  stm8l15x_gpio.o [1]
+  .near_func.text  ro code  0x0081c0    0x3  interrupt.o [4]
+  .near_func.text  ro code  0x0081c3    0x3  low_level_init.o [4]
+  .near_func.text  ro code  0x0081c6    0x3  exit.o [4]
+  .near_func.text  ro code  0x0081c9    0x3  unhandled_exception.o [4]
+  .near_func.text  ro code  0x0081cc    0x1  __dbg_break.o [3]
+                          - 0x0081cd  0x14d
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+C:\Users\admin\Documents\stm8_project\Debug\Obj: [1]
+    main.o                      79
+    stm8l15x_gpio.o            153
+    ------------------------------------------------
+    Total:                     232
+
+command line: [2]
+    ------------------------------------------------
+    Total:
+
+dbgstm8smd.a: [3]
+    __dbg_break.o                1
+    __dbg_xxexit.o              20
+    ------------------------------------------------
+    Total:                      21
+
+dlstm8smn.a: [4]
+    cexit.o                      5
+    cstartup.o                  19
+    exit.o                       3
+    init.o                      20
+    interrupt.o                  3      128
+    low_level_init.o             3
+    unhandled_exception.o        3
+    vreg_util.o                 24
+    vregs.o                                       12
+    ------------------------------------------------
+    Total:                      80      128       12
+
+    Linker created                               256
+----------------------------------------------------
+    Grand Total:               333      128      268
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address  Size  Type      Object
+-----                    -------  ----  ----      ------
+?b0                     0x000000        Data  Gb  vregs.o [4]
+?b1                     0x000001        Data  Gb  vregs.o [4]
+?b10                    0x00000a        Data  Gb  vregs.o [4]
+?b11                    0x00000b        Data  Gb  vregs.o [4]
+?b2                     0x000002        Data  Gb  vregs.o [4]
+?b3                     0x000003        Data  Gb  vregs.o [4]
+?b4                     0x000004        Data  Gb  vregs.o [4]
+?b5                     0x000005        Data  Gb  vregs.o [4]
+?b6                     0x000006        Data  Gb  vregs.o [4]
+?b7                     0x000007        Data  Gb  vregs.o [4]
+?b8                     0x000008        Data  Gb  vregs.o [4]
+?b9                     0x000009        Data  Gb  vregs.o [4]
+?e0                     0x000001        Data  Gb  vregs.o [4]
+?e1                     0x000005        Data  Gb  vregs.o [4]
+?e2                     0x000009        Data  Gb  vregs.o [4]
+?l0                     0x000000        Data  Gb  vregs.o [4]
+?l1                     0x000004        Data  Gb  vregs.o [4]
+?l2                     0x000008        Data  Gb  vregs.o [4]
+?push_w4                0x00812a        Code  Gb  vreg_util.o [4]
+?w0                     0x000000        Data  Gb  vregs.o [4]
+?w1                     0x000002        Data  Gb  vregs.o [4]
+?w2                     0x000004        Data  Gb  vregs.o [4]
+?w3                     0x000006        Data  Gb  vregs.o [4]
+?w4                     0x000008        Data  Gb  vregs.o [4]
+?w5                     0x00000a        Data  Gb  vregs.o [4]
+CSTACK$$Base            0x000f00         --   Gb  - Linker created -
+CSTACK$$Limit           0x001000         --   Gb  - Linker created -
+Delay                   0x00810e  0x1c  Code  Gb  main.o [1]
+GPIO_Init               0x008080  0x8e  Code  Gb  stm8l15x_gpio.o [1]
+GPIO_ResetBits          0x0081bc   0x4  Code  Gb  stm8l15x_gpio.o [1]
+GPIO_SetBits            0x0081b0   0x7  Code  Gb  stm8l15x_gpio.o [1]
+INTVEC$$Base            0x008000         --   Gb  - Linker created -
+INTVEC$$Limit           0x008080         --   Gb  - Linker created -
+LED_GPIO_Init           0x008194   0xc  Code  Gb  main.o [1]
+LED_Off                 0x0081a8   0x8  Code  Gb  main.o [1]
+LED_On                  0x0081a0   0x8  Code  Gb  main.o [1]
+Region$$Table$$Base   0x00000000         --   Gb  - Linker created -
+Region$$Table$$Limit  0x00000000         --   Gb  - Linker created -
+__DebugBreak            0x0081cc   0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x00816d  0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_data_init2        0x008159  0x14  Code  Gb  init.o [4]
+__iar_program_start     0x008181        Code  Gb  cstartup.o [4]
+__iar_unhandled_exception
+                        0x0081c9        Code  Gb  unhandled_exception.o [4]
+__intvec                0x008000        Data  Gb  interrupt.o [4]
+__low_level_init        0x0081c3   0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x0081b7        Code  Gb  cexit.o [4]
+exit                    0x0081c6   0x3  Code  Gb  exit.o [4]
+main                    0x008142  0x17  Code  Gb  main.o [1]
+
+
+[1] = C:\Users\admin\Documents\stm8_project\Debug\Obj
+[2] = command line
+[3] = dbgstm8smd.a
+[4] = dlstm8smn.a
+
+  333 bytes of readonly  code memory
+  128 bytes of readonly  data memory
+  268 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
